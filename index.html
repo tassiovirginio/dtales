@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTales Produtora | Tales Guerreiro</title>
+    <meta name="description" content="DTales Produtora - Design e Produção Audiovisual por Tales Guerreiro.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dtales: {
+                            dark: '#0D0D0D',
+                            burgundy: '#590313',
+                            purple: '#A305A6',
+                            orange: '#D95407',
+                            red: '#BF1E0F',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0D0D0D; color: #f4f4f5; }
+        .text-gradient {
+            background: linear-gradient(to right, #BF1E0F, #A305A6, #D95407);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-mesh {
+            background-image: radial-gradient(at 0% 0%, rgba(89, 3, 19, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(163, 5, 166, 0.1) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-dtales-dark selection:bg-dtales-red/30">
+
+    <!-- Navegação -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <img src="https://raw.githubusercontent.com/tassiovirginio/dtales/refs/heads/master/logo_oficial.png" 
+                     alt="Logo DTales" 
+                     class="w-10 h-10 object-cover rounded-full border-2 border-dtales-red shadow-[0_0_15px_rgba(191,30,15,0.3)]">
+                <div class="flex flex-col leading-none">
+                    <span class="text-xl font-black tracking-tighter uppercase italic">DTales</span>
+                    <span class="text-[10px] text-dtales-purple font-bold uppercase tracking-widest">Produtora</span>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] items-center">
+                <a href="#inicio" class="hover:text-dtales-orange transition-colors">Início</a>
+                <a href="#portfolio" class="hover:text-dtales-orange transition-colors">Portfólio</a>
+                <a href="#servicos" class="hover:text-dtales-orange transition-colors">Serviços</a>
+                <a href="https://wa.me/5587988691006" target="_blank" class="px-6 py-2.5 bg-gradient-to-r from-dtales-red to-dtales-burgundy text-white rounded-full flex items-center gap-2 hover:scale-105 transition-all">
+                    <i data-lucide="phone" class="w-3 h-3"></i> Contacto
+                </a>
+            </div>
+
+            <button onclick="toggleMenu()" class="md:hidden text-dtales-red">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-dtales-dark translate-x-full transition-transform duration-500 md:hidden flex flex-col items-center justify-center gap-8 text-center">
+        <button onclick="toggleMenu()" class="absolute top-8 right-8 text-dtales-red">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <img src="https://raw.githubusercontent.com/tassiovirginio/dtales/refs/heads/master/logo_oficial.png" class="w-24 h-24 rounded-full border-4 border-dtales-red mb-4">
+        <a href="#inicio" onclick="toggleMenu()" class="text-3xl font-black italic uppercase">Início</a>
+        <a href="#portfolio" onclick="toggleMenu()" class="text-3xl font-black italic uppercase">Portfólio</a>
+        <a href="#servicos" onclick="toggleMenu()" class="text-3xl font-black italic uppercase">Serviços</a>
+        <a href="https://wa.me/5587988691006" class="mt-4 px-10 py-4 bg-dtales-red text-white rounded-full font-black uppercase italic">WhatsApp</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-mesh">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 animate-in fade-in slide-in-from-left duration-1000">
+                <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-dtales-red/30 bg-dtales-red/10 text-dtales-orange text-xs font-bold uppercase tracking-widest">
+                    <i data-lucide="award" class="w-3 h-3 text-dtales-purple"></i> Design Forjado na Batalha
+                </div>
+                <h1 class="text-6xl md:text-8xl font-black italic uppercase leading-[0.85] tracking-tighter">
+                    A PRODUTORA <br/>
+                    <span class="text-gradient">DOS VENCEDORES</span>
+                </h1>
+                <p class="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed border-l-4 border-dtales-burgundy pl-6">
+                    Tales Guerreiro apresenta a DTales. Transformamos a sua visão em realidade visual com força, precisão e criatividade extrema.
+                </p>
+                <div class="flex flex-wrap gap-5 pt-4">
+                    <a href="#portfolio" class="px-10 py-5 bg-dtales-red text-white font-black uppercase tracking-widest hover:bg-dtales-orange transition-all shadow-xl shadow-dtales-red/20 flex items-center gap-2">
+                        Ver Projetos <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://wa.me/5587988691006" class="px-10 py-5 border-2 border-zinc-800 font-black uppercase tracking-widest hover:border-dtales-purple transition-all">
+                        Orçamento
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative hidden lg:block">
+                <div class="relative aspect-square rounded-[4rem] overflow-hidden border-2 border-zinc-800 bg-zinc-900 shadow-2xl rotate-3 hover:rotate-0 transition-all duration-1000 group">
+                    <img src="https://raw.githubusercontent.com/tassiovirginio/dtales/refs/heads/master/logo_oficial.png" 
+                         alt="Tales Guerreiro" 
+                         class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dtales-dark via-transparent to-transparent"></div>
+                    <div class="absolute bottom-12 left-12">
+                        <h3 class="text-4xl font-black italic uppercase text-white tracking-tighter">Tales <span class="text-dtales-red">Guerreiro</span></h3>
+                        <p class="text-dtales-orange font-bold uppercase tracking-widest text-xs mt-1">Founder & Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfólio Section -->
+    <section id="portfolio" class="py-32 bg-dtales-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+                <div class="space-y-4">
+                    <span class="text-dtales-purple font-black uppercase tracking-[0.5em] text-xs">Portfólio DTales</span>
+                    <h2 class="text-5xl md:text-8xl font-black italic uppercase leading-none tracking-tighter">
+                        O QUE <span class="text-dtales-red">CRIAMOS</span>
+                    </h2>
+                </div>
+                <p class="text-zinc-500 max-w-sm italic text-right border-r-4 border-dtales-orange pr-6">
+                    Produções visuais e audiovisuais de alto impacto para marcas que não aceitam o comum.
+                </p>
+            </div>
+
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- As imagens serão inseridas pelo script abaixo -->
+            </div>
+
+            <div class="mt-20 text-center">
+                <a href="https://www.facebook.com/dtalesprodutora/" target="_blank" class="inline-flex items-center gap-4 text-dtales-purple hover:text-dtales-orange font-black uppercase tracking-widest transition-all border-b-2 border-dtales-burgundy pb-2">
+                    Mais no Facebook <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-32 bg-zinc-950/50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="p-12 rounded-[3rem] bg-dtales-dark border border-zinc-800 group hover:border-dtales-red transition-all">
+                    <i data-lucide="palette" class="w-12 h-12 text-dtales-red mb-8 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-2xl font-black uppercase italic mb-4">Design Visual</h3>
+                    <p class="text-zinc-500">Logótipos e identidades visuais que constroem autoridade imediata.</p>
+                </div>
+                <div class="p-12 rounded-[3rem] bg-dtales-dark border border-zinc-800 group hover:border-dtales-purple transition-all">
+                    <i data-lucide="film" class="w-12 h-12 text-dtales-purple mb-8 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-2xl font-black uppercase italic mb-4">Audiovisual</h3>
+                    <p class="text-zinc-500">Produção de vídeo e fotografia com edição cinematográfica profissional.</p>
+                </div>
+                <div class="p-12 rounded-[3rem] bg-dtales-dark border border-zinc-800 group hover:border-dtales-orange transition-all">
+                    <i data-lucide="layers" class="w-12 h-12 text-dtales-orange mb-8 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-2xl font-black uppercase italic mb-4">Social Media</h3>
+                    <p class="text-zinc-500">Estratégia visual para redes sociais focado em engajamento e conversão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-32 px-6">
+        <div class="container mx-auto max-w-5xl text-center space-y-12">
+            <div class="bg-gradient-to-br from-dtales-burgundy to-dtales-red p-16 md:p-24 rounded-[4rem] shadow-2xl relative overflow-hidden">
+                <div class="relative z-10 space-y-8">
+                    <h2 class="text-5xl md:text-8xl font-black italic uppercase leading-none text-white tracking-tighter">
+                        VAMOS CRIAR <br/> <span class="text-dtales-dark opacity-40">ALGO ÉPICO?</span>
+                    </h2>
+                    <div class="flex flex-col md:flex-row justify-center gap-6">
+                        <a href="https://wa.me/5587988691006" class="px-12 py-6 bg-dtales-dark text-white rounded-2xl font-black uppercase tracking-widest text-xl hover:scale-105 transition-transform">
+                            WhatsApp
+                        </a>
+                        <a href="mailto:dtales.pro@gmail.com" class="px-12 py-6 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-2xl font-black uppercase tracking-widest text-xl hover:bg-white/20 transition-all">
+                            E-mail
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-zinc-900 bg-dtales-dark">
+        <div class="container mx-auto px-6 text-center space-y-8">
+            <img src="https://raw.githubusercontent.com/tassiovirginio/dtales/refs/heads/master/logo_oficial.png" class="w-16 h-16 mx-auto rounded-full opacity-50 grayscale hover:grayscale-0 transition-all">
+            <div class="flex justify-center gap-6 text-zinc-500">
+                <a href="https://www.facebook.com/dtalesprodutora/" class="hover:text-dtales-purple transition-colors"><i data-lucide="facebook"></i></a>
+                <a href="#" class="hover:text-dtales-orange transition-colors"><i data-lucide="instagram"></i></a>
+                <a href="mailto:dtales.pro@gmail.com" class="hover:text-dtales-red transition-colors"><i data-lucide="mail"></i></a>
+            </div>
+            <p class="text-zinc-700 text-[10px] uppercase tracking-[0.5em] font-black">
+                © 2026 DTALES PRODUTORA • DESIGN COM ALMA DE GUERREIRO
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar ícones Lucide
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('translate-x-full');
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-dtales-dark/90', 'backdrop-blur-xl', 'py-4', 'border-b', 'border-zinc-800/50');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('bg-dtales-dark/90', 'backdrop-blur-xl', 'py-4', 'border-b', 'border-zinc-800/50');
+                nav.classList.add('py-6');
+            }
+        });
+
+        // Portfolio Grid Generation
+        const baseUrl = "https://raw.githubusercontent.com/tassiovirginio/dtales/master/portfolio/";
+        const files = [
+            "480778651_8913785425393999_878228825637891190_n.jpg",
+            "480802642_8913798592059349_8813807244717254686_n.jpg",
+            "480825546_8936722383100303_3889328507297683761_n.jpg",
+            "480858402_8932257676880107_7543466716695505823_n.jpg",
+            "480551592_8936720813100460_3091221673291068547_n.jpg",
+            "481249636_8919370591502149_5807848995348699715_n.jpg",
+            "481200561_8919384288167446_5108716170934989741_n.jpg",
+            "482055261_8955655837873624_2458429833832622148_n.jpg",
+            "588043595_18331015198243459_1081576276904925014_n.jpeg",
+            "132665375_3367449093361021_2072146416039543675_n.jpg",
+            "133384803_3368824376556826_3047633415974661725_n.jpg",
+            "133906900_3368834279889169_1076355300859184622_n.jpg",
+            "134541762_3375612525878011_3427661693750547101_n.jpg"
+        ];
+
+        const grid = document.getElementById('portfolio-grid');
+        files.forEach((file, index) => {
+            const card = document.createElement('div');
+            card.className = "group relative overflow-hidden rounded-[2.5rem] bg-zinc-900 border border-zinc-800 aspect-square";
+            card.innerHTML = `
+                <img src="${baseUrl}${file}" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-60 group-hover:opacity-100" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-dtales-dark via-transparent to-transparent opacity-90 transition-opacity group-hover:opacity-70"></div>
+                <div class="absolute bottom-0 left-0 p-8 w-full transform transition-all duration-500 group-hover:-translate-y-2">
+                    <span class="text-dtales-orange font-black uppercase tracking-widest text-[10px] mb-2 block">Produção DTales</span>
+                    <h3 class="text-2xl font-black uppercase italic mb-2 group-hover:text-dtales-red transition-colors">Projeto #${index + 1}</h3>
+                    <div class="w-0 group-hover:w-12 h-1 bg-dtales-purple transition-all duration-500"></div>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
