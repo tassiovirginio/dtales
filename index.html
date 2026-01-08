@@ -44,6 +44,10 @@
             background: linear-gradient(to right, #BF1E0F, #A305A6, #D95407);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            /* Padding horizontal para garantir que o itálico não seja cortado pelo clip-text */
+            padding-left: 0.1em;
+            padding-right: 0.2em;
+            margin-left: -0.1em;
         }
         .bg-mesh {
             background-image: radial-gradient(at 0% 0%, rgba(89, 3, 19, 0.15) 0px, transparent 50%),
@@ -100,7 +104,8 @@
                 <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-dtales-red/30 bg-dtales-red/10 text-dtales-orange text-xs font-bold uppercase tracking-widest">
                     <i data-lucide="award" class="w-3 h-3 text-dtales-purple"></i> Design Forjado na Batalha
                 </div>
-                <h1 class="text-6xl md:text-8xl font-black italic uppercase leading-[0.85] tracking-tighter">
+                <!-- Ajustado: leading e padding para evitar corte nas letras inclinadas -->
+                <h1 class="text-6xl md:text-8xl font-black italic uppercase leading-[1.1] md:leading-[1] tracking-tight pr-4">
                     A PRODUTORA <br/>
                     <span class="text-gradient">DOS VENCEDORES</span>
                 </h1>
@@ -118,7 +123,7 @@
             </div>
             
             <div class="relative hidden lg:block">
-                <div class="relative aspect-square rounded-[4rem] overflow-hidden border-2 border-zinc-800 bg-zinc-900 shadow-2xl rotate-3 hover:rotate-0 transition-all duration-1000 group">
+                <div class="relative aspect-square rounded-[4rem] overflow-hidden border-2 border-zinc-800 bg-transparent shadow-2xl rotate-3 hover:rotate-0 transition-all duration-1000 group">
                     <img src="https://raw.githubusercontent.com/tassiovirginio/dtales/refs/heads/master/logo_oficial.png" 
                          alt="Tales Guerreiro" 
                          class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
@@ -142,7 +147,7 @@
                         O QUE <span class="text-dtales-red">CRIAMOS</span>
                     </h2>
                 </div>
-                <p class="text-zinc-500 max-w-sm italic text-right border-r-4 border-dtales-orange pr-6">
+                <p class="text-zinc-500 max-w-sm italic text-right border-r-4 border-dtales-orange pr-6 leading-relaxed">
                     Produções visuais e audiovisuais de alto impacto para marcas que não aceitam o comum.
                 </p>
             </div>
